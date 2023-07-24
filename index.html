@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="bg-amber-500 justify-center sm:text-5xl">
+    
+   <div id="gameContainer flex h-screen items-center justify-center"> 
+    <h1 class="font-mono">TIC TAC TOE</h1> 
+    <div id="modeSelect" class="flex py-16 items-center justify-center" >
+        <ol>
+            <li class="py-3"><button id="vcpu">VS CPU</button></li>
+            <li><button id="player">2 PLAYER</button></li>
+        </ol>
+    </div>
+    <div id="cellContainer" class=" opacity-0 bg-white items-center justify-center">
+        <div id="0" cellid="0" class="cell  justify-center"></div>
+        <div id="1" cellid="1" class="cell  justify-center"></div>
+        <div id="2" cellid="2" class="cell  justify-center"></div>
+        <div id="3" cellid="3" class="cell  justify-center"></div>
+        <div id="4" cellid="4" class="cell  justify-center"></div>
+        <div id="5" cellid="5" class="cell  justify-center"></div>
+        <div id="6" cellid="6" class="cell  justify-center"></div>
+        <div id="7" cellid="7" class="cell  justify-center"></div>
+        <div id="8" cellid="8" class="cell  justify-center"></div>
+    </div>
+    <div id="stat" class="flex items-center justify-center"></div>
+    <div class=" flex items-center justify-center"><button id="restart"  class="opacity-0 flex items-center justify-center">RESTART</button></div>
+    <!-- <button id="restart"  class="flex items-center justify-center">RESTART</button> -->
+    </div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
