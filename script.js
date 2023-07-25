@@ -27,6 +27,8 @@
         
         startGame();
         function restartGame() {
+            vc.disabled=false;
+            vh.disabled=false;
             running = true;
             gameWon = false;
             currentplayer = "X";
@@ -43,14 +45,18 @@
 
         function startGame() {
             // restart.style.opacity=100;
+            menu.style.height=0;
             vc.addEventListener("click",vsCpu);
             vh.addEventListener("click",vHuman);
             console.log("started");
             cells.forEach((cell) => cell.addEventListener("click", onClickCell));
             running = true;
+           
         }
 
         function onClickCell() {
+            vc.removeEventListener("click",vsCpu);
+            vh.removeEventListener("click",vHuman);
             const cellIndex = this.getAttribute("cellid");
             if (options[cellIndex] !== "" || !running) {
                 return;
@@ -165,6 +171,8 @@
         }
         
         function vsCpu(){
+            vc.disabled=true;
+            vh.disabled=true;
              menu.style.opacity=0;
              cellc.style.opacity=100;
              restart.style.opacity=100;
@@ -172,6 +180,8 @@
         }
 
         function vHuman(){
+            vc.disabled=true;
+            vh.disabled=true;
             menu.style.opacity=0;
             restart.style.opacity=100;
             twoPlayer=true;

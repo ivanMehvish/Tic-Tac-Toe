@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
+    <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     
 </head>
 <body class="bg-amber-500 justify-center sm:text-5xl">
-    
-   <div id="gameContainer flex h-screen items-center justify-center"> 
     <h1 class="font-mono">TIC TAC TOE</h1> 
-    <div id="modeSelect" class="flex py-16 items-center justify-center" >
+   <div id="gameContainer" class="flex flex-col justify-center items-center"> 
+    
+    <div id="modeSelect" class="flex w-fit h-fit sm:w-full sm:max-w-md py-16 items-center justify-center bg-amber-300 border-2 border-black p-4" >
         <ol>
             <li class="py-3"><button id="vcpu">VS CPU</button></li>
             <li><button id="player">2 PLAYER</button></li>
@@ -30,7 +30,7 @@
         <div id="8" cellid="8" class="cell  justify-center"></div>
     </div>
     <div id="stat" class="flex items-center justify-center"></div>
-    <div class=" flex items-center justify-center"><button id="restart"  class="opacity-0 flex items-center justify-center">RESTART</button></div>
+    <div class=" flex items-center justify-center"><button id="restart"  class="opacity-0 flex items-center justify-center my-3 py-3  bg-amber-300 border-2 border-black p-4">RESTART</button></div>
     <!-- <button id="restart"  class="flex items-center justify-center">RESTART</button> -->
     </div>
 </div>
